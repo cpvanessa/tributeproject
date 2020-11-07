@@ -1,0 +1,39 @@
+body{
+  margin: 0; /*elimina el margen por defecto*/
+  background-color: #ffffff;
+}
+
+#title{
+  text-align: center;
+ 
+}
+
+#main{
+background: #eee;
+padding: 20px;
+}
+
+#img-div {
+  text-align: center;
+}
+
+div img
+    {
+     max-width: 100%;
+    }
+ 
+div figcaption
+    {
+    text-align: center;
+    
+    }
+#tribut-info{
+  margin: 20px 40px 10px 40px;
+  padding: 10px;
+}
+
+#info{
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 15px;
+}
