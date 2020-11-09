@@ -11,19 +11,27 @@
 		<main id="main">
 	 
 	 	 	<h1 id="title"> Hannah Arendt </h1>
-	  
+			
+				<ul>
+					<li class='en lang'>English</li>
+					<li class='fr'>French</li>
+				</ul>
+			
 	 		<div id="img-div">
 	    
 	    		<img id="image"
 	              src="https://i1.wp.com/afcarmedia.com/wp-content/uploads/2017/05/hannah-arendt-nadie-tiene-que-cumplir-la-ley.jpg?resize=620%2C264&ssl=1"
 	     		  alt="Hannah Arendt charicature"/>
 	    
-					<figcaption id="img-caption">
+					<figcaption class="img-caption english">
 	      			Its thought-provoking caption reads: "No one has the right to obey.".
-	    			</figcaption>
+					</figcaption>
+					<figcaption class="img-caption french">
+						Sa pensée provocatrice:"Personne a le droit d'obeir".
+					  </figcaption>
 	 	 	</div>
 
-	 		<section id="tribut-info">
+	 		<section class="tribut-info english">
 	 	 		<p> A philosopher, writer and professor of political theory: Hannah Arendt (1906-1975) became renowned in the US and worldwide for her works examining revolutions and totalitarian systems, as well as the trial of Nazi war criminal Adolf Eichmann, in which she radically questioned traditions and ideologies.
 	   			</p>
 	   			<p> Arendt’s reputation as a major political thinker was established by her Origins of Totalitarianism (1951), which also treated 19th-century anti-Semitism, imperialism, and racism. Arendt viewed the growth of totalitarianism as the outcome of the disintegration of the traditional nation-state. She argued that totalitarian regimes, through their pursuit of raw political power and their neglect of material or utilitarian considerations, had revolutionized the social structure and made contemporary politics nearly impossible to predict.
@@ -31,18 +39,76 @@
 				<p>Arendt resumed contact with Heidegger in 1950, and in subsequent essays and lectures she defended him by claiming that his Nazi involvement had been the “mistake” of a great philosopher. In the late 20th century, following the publication of a volume of letters between Arendt and Heidegger written between 1925 and 1975, some scholars suggested that Arendt’s personal and intellectual attachment to her former teacher had led her to adopt a lenient assessment of him that was inconsistent with her condemnation of the collaboration of others and with her insistence in various writings that any act of compromise with evil is wholly immoral.
 	 			</p>
 	 
-	 		</section>
+			 </section>
+			 <section class="tribut-info french">
+				<p> Philosophe, écrivain et professeur de théorie politique: Hannah Arendt (1906-1975) est devenue célèbre aux États-Unis et dans le monde pour ses travaux sur les révolutions et les systèmes totalitaires, ainsi que le procès du criminel de guerre nazi Adolf Eichmann, dans lequel elle a radicalement remis en question traditions et idéologies.
+				 </p>
+				 <p> La réputation d’Arendt en tant que théoriticienne politique majeure a été établie par son livre "Origines du totalitarisme" (1951), qui traitait également l’antisémitisme, l’impérialisme et le racisme du XIXe siècle. Arendt considérait la croissance du totalitarisme comme le résultat de la désintégration de l'État-nation traditionnel. Elle a soutenu que les régimes totalitaires, par leur quête d'un pouvoir politique brut et leur négligence des considérations matérielles ou utilitaires, avaient révolutionné la structure sociale et rendu la politique contemporaine presque impossible à prévoir.
+
+			   </p>
+			  <p>Arendt prit contact avec Heidegger en 1950, et dans des essais et des conférences ultérieurs, elle l'a défendu en affirmant que son implication nazie avait été «l'erreur» d'un grand philosophe. À la fin du XXe siècle, à la suite de la publication d'un volume de lettres entre Arendt et Heidegger écrites entre 1925 et 1975, certains chercheurs ont suggéré que l'attachement personnel et intellectuel d'Arendt à son ancien professeur l'avait amenée à adopter une évaluation indulgente de lui qui était incohérente. avec sa condamnation de la collaboration des autres et avec son insistance dans divers écrits sur le fait que tout acte de compromis avec le mal est totalement immoral.
+			   </p>
+   
+		   </section>
 	 
 	 	</main>
 
-		<footer id = info>
+		<footer class = "info english">
 	       
 	 		If you want to know more about Hannah Arendt, check
 			<a  id="tribute-link"
 		 	href="https://en.wikipedia.org/wiki/Hannah_Arendt" target="_blank"
-	        	>Wikipedia Hannah Arendt</a>
+				>Wikipedia Hannah Arendt</a>
+			</footer>
+				
+		<footer class = "info french">
+	       
+				Si tu veux savoir plus sur Hannah Arendt, clique ici
+				   <a  id="tribute-link"
+					href="https://en.wikipedia.org/wiki/Hannah_Arendt" target="_blank"
+					   >Wikipedia Hannah Arendt</a>
 		</footer>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+	//changement couleur langues
+	let langues = document.querySelectorAll('li');
+		
+		for (let i = 0; i < langues.length; i++){
+			langues[i].addEventListener('click', function(){
+				
+			document.querySelector('.lang').classList.remove('lang');
+			this.classList.add('lang');})}
+	//changement langue 
+		$('.french').hide();
+
+		$(".fr").click(function(){
+
+		if ($('.french').is(':hidden')){
+ 
+ 			$('.french').show();
+			$('.english').hide();
+		}})
+
+		$(".en").click(function(){
+
+		if ($('.english').is(':hidden')){
+
+	 		$('.english').show();
+			$('.french').hide();
+		}})
+	
+		
+
+
+	
+
+	
+		
+		
+
+	</script>
 	</body>
 </html>
 
